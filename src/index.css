@@ -1,0 +1,171 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background-color: #020617;
+  color: white;
+}
+
+/* ===== NAVBAR ===== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: #020617;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+/* ===== HOME PAGE ===== */
+.home {
+  padding: 30px;
+  text-align: center;
+}
+
+/* ===== SEARCH BAR ===== */
+.search {
+  margin-top: 20px;
+}
+
+.search input {
+  padding: 10px;
+  width: 260px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.search button {
+  padding: 10px 16px;
+  margin-left: 10px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search button:hover {
+  background: #4f46e5;
+}
+
+/* ===== MOVIE GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* ===== MOVIE CARD ===== */
+.card {
+  background: #111827;
+  border-radius: 10px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.card button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  background: #6366f1;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ===== DETAILS PAGE ===== */
+.details {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+.details img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.details div {
+  max-width: 600px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .details img {
+    width: 220px;
+  }
+
+  .search input {
+    width: 200px;
+  }
+}
+/* Light mode (default) */
+body {
+  background-color: #f8fafc;
+  color: #020617;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode */
+body.dark {
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+/* Example cards / sections */
+.card {
+  background: white;
+  color: #020617;
+}
+
+body.dark .card {
+  background: #0f172a;
+  color: #f8fafc;
+}
